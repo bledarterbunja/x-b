@@ -180,18 +180,18 @@ header {
 
 .service .container .content p:first-child {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .service .container .content h1 {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 300;
   color: white;
 }
 
 .service .container .content p {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0 28%;
   margin-bottom: 70px;
   color: #fff;
@@ -459,9 +459,9 @@ header {
   color: #fff;
 }
 
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
+.wrapper .phone:hover,
+.wrapper .phone:hover .tooltip,
+.wrapper .phone:hover .tooltip::before {
   background: #00ff00;
   color: #fff;
 }
@@ -515,6 +515,18 @@ body {
 .footer .row a i {
   font-size: 2em;
   margin: 0% 1%;
+}
+.icon {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5em; /* Adjust icon size */
+}
+.copied {
+  font-weight: bold;
+  color: green; /* Change to your desired color */
+  margin-left: 5px; /* Add some spacing if needed */
 }
 
 @media (max-width: 720px) {
