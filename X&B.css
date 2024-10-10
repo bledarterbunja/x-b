@@ -2,9 +2,28 @@ body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
 }
+
 * {
   scroll-behavior: smooth;
 }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 header {
   background-image: url("img/traf-sL7w1eUfHJQ-unsplash.jpg");
   background-repeat: no-repeat;
@@ -206,9 +225,9 @@ header {
   column-gap: 20px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin: 20px -48px;
   width: 110%;
-  margin-left: -80px;
+
 }
 
 .service .container .row .col {
@@ -365,6 +384,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 #about .container {
   width: 70%;
   margin: 7% auto;
@@ -387,6 +407,7 @@ header {
   font-family: "Poppins", sans-serif;
   justify-content: center;
 }
+
 .wrapper {
   display: inline-flex;
   list-style: none;
@@ -473,9 +494,84 @@ header {
   color: #fff;
 }
 
-body {
-  margin: 0;
-  overflow-x: hidden;
+.contact {
+  background-color: #100e09;
+ color: white;
+  width: 50%;
+  display: grid;
+  justify-content: center;
+  margin: 7% auto;
+  border: 1px solid;
+}
+
+.form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+}
+
+/* styling of Input */
+.input {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+/* styling of animated border */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+/* Hover on Input */
+input:hover {
+  background: var(--input-hovered-color);
+}
+
+textarea:hover {
+  background: var(--input-hovered-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+input:focus~.input-border {
+  width: 100%;
+}
+
+textarea:focus~.input-border {
+  width: 100%;
+}
+
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+input:valid~.input-border {
+  width: 100%;
+}
+
+textarea:valid~.input-border {
+  width: 100%;
 }
 
 .footer {
@@ -516,17 +612,22 @@ body {
   font-size: 2em;
   margin: 0% 1%;
 }
+
 .icon {
   text-decoration: none;
   color: inherit;
   display: inline-flex;
   align-items: center;
-  font-size: 1.5em; /* Adjust icon size */
+  font-size: 1.5em;
+  /* Adjust icon size */
 }
+
 .copied {
   font-weight: bold;
-  color: green; /* Change to your desired color */
-  margin-left: 5px; /* Add some spacing if needed */
+  color: green;
+  /* Change to your desired color */
+  margin-left: 5px;
+  /* Add some spacing if needed */
 }
 
 @media (max-width: 720px) {
@@ -534,11 +635,13 @@ body {
     text-align: left;
     padding: 5%;
   }
+
   .footer .row ul li {
     display: block;
     margin: 10px 0px;
     text-align: left;
   }
+
   .footer .row a i {
     margin: 0% 3%;
   }
@@ -548,9 +651,8 @@ body {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
 }
-
