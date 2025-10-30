@@ -114,7 +114,6 @@ header {
   left: 0;
 }
 
-/* k */
 .button-57 {
   position: relative;
   overflow: hidden;
@@ -199,7 +198,6 @@ header {
   box-shadow: 0px 9px 13px -1px rgba(0, 0, 0, 0.27);
 }
 
-/* Hidden extra row */
 .extra-row {
   max-height: 0;
   opacity: 0;
@@ -208,7 +206,6 @@ header {
   transition: all 0.6s ease;
 }
 
-/* When shown */
 .extra-row.show {
   max-height: 1000px;
   opacity: 1;
@@ -552,7 +549,6 @@ header {
   right: -60px;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
   .slider-btn {
     width: 40px;
@@ -655,7 +651,7 @@ header {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive */
+
 @media (max-width: 700px) {
   .feature-card {
     padding: 30px 20px;
@@ -931,7 +927,6 @@ form .form {
   width: var(--width-of-input);
 }
 
-/* styling of Input */
 .input {
   color: #fff;
   font-size: 0.9rem;
@@ -944,7 +939,6 @@ form .form {
   border-bottom: var(--border-height) solid var(--border-before-color);
 }
 
-/* styling of animated border */
 .input-border {
   position: absolute;
   background: var(--border-after-color);
@@ -955,7 +949,6 @@ form .form {
   transition: 0.3s;
 }
 
-/* Hover on Input */
 input:hover {
   background: var(--input-hovered-color);
 }
@@ -972,7 +965,6 @@ textarea:focus {
   outline: none;
 }
 
-/* here is code of animated border */
 input:focus ~ .input-border {
   width: 100%;
 }
@@ -981,8 +973,6 @@ textarea:focus ~ .input-border {
   width: 100%;
 }
 
-/* === if you want to do animated border on typing === */
-/* remove input:focus code and uncomment below code */
 input:valid ~ .input-border {
   width: 100%;
 }
@@ -1040,15 +1030,12 @@ textarea:valid ~ .input-border {
   display: inline-flex;
   align-items: center;
   font-size: 1.5em;
-  /* Adjust icon size */
 }
 
 .copied {
   font-weight: bold;
   color: green;
-  /* Change to your desired color */
   margin-left: 5px;
-  /* Add some spacing if needed */
 }
 
 @media (max-width: 720px) {
