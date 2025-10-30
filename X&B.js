@@ -1,6 +1,6 @@
 document.getElementById("phoneItem").addEventListener("click", function () {
   const phoneNumber = document.getElementById("phoneNumber").value;
-  const numberToCopy = phoneNumber.replace("+", "").slice(-10); // Extract last 9 digits
+  const numberToCopy = phoneNumber.replace("+", "").slice(-10);
 
   navigator.clipboard
     .writeText(numberToCopy)
@@ -19,26 +19,21 @@ document.getElementById("phoneItem").addEventListener("click", function () {
 document
   .getElementById("copy-phone")
   .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    const phoneNumber = "044970581";
+    event.preventDefault();
+    const phoneNumber = "044999999";
 
     navigator.clipboard
       .writeText(phoneNumber)
       .then(() => {
-        // Hide the phone icon
         const copyText = document.getElementById("copy-text");
-        copyText.style.display = "none"; // Hide the phone icon
-
-        // Show the "Copied!" text
+        copyText.style.display = "none";
         const copiedText = document.createElement("span");
         copiedText.textContent = "Copied!";
-        copiedText.classList.add("copied"); // Add a class for styling if needed
-        document.getElementById("copy-phone").appendChild(copiedText); // Add the "Copied!" text
-
-        // Optionally, revert back after a few seconds
+        copiedText.classList.add("copied");
+        document.getElementById("copy-phone").appendChild(copiedText); 
         setTimeout(() => {
-          copyText.style.display = ""; // Show the phone icon again
-          copiedText.remove(); // Remove the "Copied!" text
+          copyText.style.display = ""; 
+          copiedText.remove(); 
         }, 2000);
       })
       .catch((err) => {
@@ -106,3 +101,4 @@ viewAllBtn.addEventListener("click", () => {
   extraRow.classList.toggle("show", expanded);
   viewAllBtn.textContent = expanded ? "View Less" : "View All";
 });
+
